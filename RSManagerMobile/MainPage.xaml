@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSManagerMobile.MainPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Авторизация"/>
+
+        <Entry Grid.Row="1"
+               Placeholder="Введите логин"
+               x:Name="entryLogin"/>
+
+        <Entry Grid.Row="2"
+               Placeholder="Введите пароль"
+               x:Name="entryPassword"/>
+
+        <Button Text="Войти"
+                Grid.Row="3"
+                Clicked="btnEnter_Clicked"/>
+
+        <Button Grid.Row="4"
+                Text="Зарегистрироваться"
+                Clicked="btnReg_Clicked"/>
+
+    </Grid>
+
+</ContentPage>

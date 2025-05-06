@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSManagerMobile.ViewPage"
+             Title="ViewPage" Loaded="ContentPage_Loaded">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackLayout x:Name="stackClient"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Имя"
+                   x:Name="entryName"/>
+            
+            <Entry Placeholder="Адрес"
+                   x:Name="entryAdres"/>
+
+            <Entry Placeholder="Телефон"
+                   x:Name="entryPhone"/>
+            
+        </StackLayout>
+
+        <StackLayout x:Name="stackCar"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Бренд"
+                   x:Name="entryBrand"/>
+
+            <Entry Placeholder="Мощность"
+                   x:Name="entryPower"/>
+
+            <Entry Placeholder="Год выпуска"
+                   x:Name="entryYear"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Цвет"
+                   x:Name="entryColor"/>
+
+        </StackLayout>
+
+        <StackLayout x:Name="stackMechanic"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Имя"
+                   x:Name="entryNameM"/>
+
+            <Entry Placeholder="Адрес"
+                   x:Name="entryAdresM"/>
+
+            <Entry Placeholder="Телефон"
+                   x:Name="entryPhoneM"/>
+
+            <Entry Placeholder="Категория"
+                   x:Name="entryCategory"/>
+
+        </StackLayout>
+
+        <StackLayout x:Name="stackPart"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Стоимость"
+                   x:Name="entryCoast"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Дата заявления"
+                   x:Name="entryDateOfI"/>
+
+            <Entry Placeholder="Категория"
+                   x:Name="entryCategoryPart"/>
+
+            <Entry Placeholder="Дата завершения"
+                   x:Name="entryDateOfC"/>
+
+        </StackLayout>
+
+        <StackLayout x:Name="stackShops"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Имя"
+                   x:Name="entryNameS"/>
+
+            <Entry Placeholder="Адрес"
+                   x:Name="entryAdresS"/>
+
+            <Entry Placeholder="Телефон"
+                   x:Name="entryPhoneS"/>
+
+        </StackLayout>
+
+        <StackLayout x:Name="stackWorks"
+                     IsVisible="Hidden">
+
+            <Entry Placeholder="Клиент"
+                   x:Name="entryClient"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Механик"
+                   x:Name="entryMechanic"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Мастерская"
+                   x:Name="entryShop"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Автомобиль"
+                   x:Name="entryCar"
+                   Keyboard="Numeric"/>
+
+            <Entry Placeholder="Запчасти"
+                   x:Name="entryPart"
+                   Keyboard="Numeric"/>
+
+        </StackLayout>
+
+        <Grid Grid.Row="1"
+              x:Name="gridView"
+              IsVisible="Hidden">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0"
+                    Text="Изменить"
+                    Clicked="btnEdit_Clicked"/>
+
+            <Button Grid.Row="1"
+                    Text="Удалить"
+                    Clicked="btnRemove_Clicked"/>
+
+            <Button Grid.Row="2"
+                    Text="Назад"
+                    Clicked="btnBack_Clicked"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1" 
+              x:Name="gridAdd"
+              IsVisible="Hidden">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0"
+                    Text="Добавить"
+                    Clicked="btnEdit_Clicked"/>
+
+            <Button Grid.Row="1"
+                    Text="Назад"
+                    Clicked="btnBack_Clicked"/>
+
+        </Grid>
+        
+    </Grid>
+
+</ContentPage>

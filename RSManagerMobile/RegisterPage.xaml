@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSManagerMobile.RegisterPage"
+             Title="RegisterPage">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Entry Placeholder="Придумайте логин"
+               x:Name="entryLogin"/>
+
+        <Entry Placeholder="Придумайте пароль"
+               x:Name="entryPassword"
+               Grid.Row="1"/>
+
+        <Entry Placeholder="Повторите пароль"
+               x:Name="entryPassword2"
+               Grid.Row="2"/>
+
+        <Button Text="Зарегистрироваться"
+                Grid.Row="3"
+                Clicked="btnReg_Clicked"/>
+
+        <Button Text="Отмена"
+                Grid.Row="4"
+                Clicked="btnCancel_Clicked"/>
+
+    </Grid>
+    
+</ContentPage>

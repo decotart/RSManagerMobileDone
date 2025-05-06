@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSManagerMobile.GeneralPage"
+             Title="GeneralPage">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0"
+                Text="Клиенты"
+                Clicked="btnClients_Clicked"/>
+
+        <Button Grid.Row="1"
+                Text="Механики"
+                Clicked="btnMechanics_Clicked"/>
+
+        <Button Grid.Row="2"
+                Text="Мастерские"
+                Clicked="btnRepairShops_Clicked"/>
+
+        <Button Grid.Row="3"
+                Text="Запчасти"
+                Clicked="btnParts_Clicked"/>
+
+        <Button Grid.Row="4"
+                Text="Работы"
+                Clicked="btnWorks_Clicked"/>
+
+        <Button Grid.Row="5"
+                Text="Автомобили"
+                Clicked="brnCars_Clicked"/>
+
+        <Button Grid.Row="6"
+                Text="Сменить пользователя"
+                Clicked="btnChangeUser_Clicked"/>
+
+    </Grid>
+</ContentPage>

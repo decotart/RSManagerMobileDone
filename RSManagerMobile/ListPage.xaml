@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RSManagerMobile.ListPage"
+             Title="ListPage" Loaded="ContentPage_Loaded">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="lvClients"
+                  ItemSelected="lvClients_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Адрес: {0}, Телефон: {1}">
+                                <Binding Path="Adres"/>
+                                <Binding Path="Phone"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+
+        <ListView x:Name="lvCars"
+                  ItemSelected="lvCars_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Brand}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Мощность: {0}л.с., Год выпуска: {1}, Цвет: {2}">
+                                <Binding Path="Power"/>
+                                <Binding Path="Year"/>
+                                <Binding Path="Color"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <ListView x:Name="lvMechanics"
+                  ItemSelected="lvMechanics_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Адрес: {0}, Телефон: {1}, Категория: {2}">
+                                <Binding Path="Adres"/>
+                                <Binding Path="Phone"/>
+                                <Binding Path="Category"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <ListView x:Name="lvParts"
+                  ItemSelected="lvParts_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Id}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Цена: {0}, Категория: {1}">
+                                <Binding Path="Coast"/>
+                                <Binding Path="Category"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <ListView x:Name="lvShops"
+                  ItemSelected="lvShops_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Адрес: {0}, Телефон: {1}">
+                                <Binding Path="Adres"/>
+                                <Binding Path="Phone"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <ListView x:Name="lvWorks"
+                  ItemSelected="lvWorks_ItemSelected"
+                  IsVisible="False">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Id}">
+                        <TextCell.Detail>
+                            <MultiBinding StringFormat="{}Клиент: {0}, Механик: {1}">
+                                <Binding Path="Client"/>
+                                <Binding Path="Mechanic"/>
+                            </MultiBinding>
+                        </TextCell.Detail>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button Grid.Row="1"
+                Text="Добавить запись"
+                Clicked="btnAdd_Clicked"/>
+        
+        <Button Grid.Row="2"
+                Text="Назад"
+                Clicked="btnBack_Clicked"/>
+        
+
+    </Grid>
+</ContentPage>
